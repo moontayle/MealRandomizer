@@ -1,0 +1,93 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext {
+        versions = [
+                'compileSdk'        : 29,
+                'minSdk'            : 23,
+                'targetSdk'         : 28,
+                'appcompat'         : '1.1.0',
+                'androidx'          : '1.0.0',
+                'androidxCollection': '1.0.0',
+                'androidxArch'      : '2.0.0',
+                'annotation'        : '1.1.0',
+                'constraintLayout'  : '2.0.0-alpha2',
+                'coreKtx'           : '1.1.0',
+                'coroutines'        : '1.3.9',
+                'crashlytics'       : '2.10.1',
+                'dagger'            : '2.23.2',
+                'espresso'          : '3.2.0',
+                'extJunit'          : '1.1.0',
+                'fabric'            : '1.28.0',
+                'firebase'          : '17.0.0',
+                'glide'             : '4.9.0',
+                'googleServices'    : '4.3.0',
+                'gson'              : '2.8.5',
+                'jsoup'             : '1.11.3',
+                'junit'             : '4.12',
+                'koin'              : '2.1.6',
+                'kotlin'            : '1.4.10',
+                'ktlint'            : '0.24.0',
+                'legacyCoreUtils'   : '1.0.0',
+                'lifecycle'         : '2.1.0',
+                'material'          : '1.1.0-alpha05',
+                'mockito'           : '2.23.0',
+                'mockito_kotlin'    : '2.0.0-RC3',
+                'navigation'        : '2.1.0',
+                'okhttp'            : '3.10.0',
+                'retrofit'          : '2.6.0',
+                'room'              : '2.2.5',
+                'supportLibrary'    : '28.0.0',
+                'test_rules'        : '1.1.0-beta02',
+                'test_runner'       : '1.2.0',
+                'ui_automator'      : '2.2.0-beta02',
+                'viewPager2'        : '1.0.0-beta02'
+        ]
+        libs = [
+                kotlin: "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${versions.kotlin}",
+                coroutines: "org.jetbrains.kotlinx:kotlinx-coroutines-android:${versions.coroutines}",
+                appcompat: "androidx.appcompat:appcompat:${versions.appcompat}",
+                coreKtx: "androidx.core:core-ktx:${versions.coreKtx}",
+                lifecycle: "androidx.lifecycle:lifecycle-extensions:${versions.lifecycle}",
+                viewModel: "androidx.lifecycle:lifecycle-viewmodel-ktx:${versions.lifecycle}",
+                material: "com.google.android.material:material:${versions.material}",
+                constraintLayout: "androidx.constraintlayout:constraintlayout:${versions.constraintLayout}",
+                navigation_fragment: "androidx.navigation:navigation-fragment-ktx:${versions.navigation}",
+                navigation_ui: "androidx.navigation:navigation-ui-ktx:${versions.navigation}",
+                annotation: "androidx.annotation:annotation:${versions.annotation}",
+                junit: "junit:junit:${versions.junit}",
+                test_runner:  "androidx.test:runner:${versions.test_runner}",
+                espresso: "androidx.test.espresso:espresso-core:${versions.espresso}",
+                koin: "org.koin:koin-android:${versions.koin}",
+                koinViewModel: "org.koin:koin-androidx-viewmodel:${versions.koin}",
+                retrofit: "com.squareup.retrofit2:retrofit:${versions.retrofit}",
+                okhttp: "com.squareup.okhttp3:okhttp:${versions.okhttp}",
+                okhttp_logging: "com.squareup.okhttp3:logging-interceptor:${versions.okhttp}",
+                room: "androidx.room:room-runtime:${versions.room}",
+                roomKapt: "androidx.room:room-compiler:${versions.room}",
+                roomKtx: "androidx.room:room-ktx:${versions.room}"
+        ]
+        versions.kotlin = '1.4.10'
+    }
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:4.1.0"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlin}"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
