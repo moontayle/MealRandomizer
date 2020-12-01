@@ -1,10 +1,7 @@
 package com.jjwestendarp.mealrandomizer
 
 import android.app.Application
-import com.jjwestendarp.mealrandomizer.di.mealDatabaseModule
-import com.jjwestendarp.mealrandomizer.di.mealRandomizerModule
-import com.jjwestendarp.mealrandomizer.di.mealRepositoryModule
-import com.jjwestendarp.mealrandomizer.di.mealSourceModule
+import com.jjwestendarp.mealrandomizer.di.*
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
@@ -15,7 +12,7 @@ class MealRandomizerApp : Application() {
 
         startKoin {
             androidContext(this@MealRandomizerApp)
-            modules(listOf(mealRandomizerModule, mealDatabaseModule, mealRepositoryModule, mealSourceModule))
+            modules(listOf(mealRandomizerModule, mealDatabaseModule, mealRepositoryModule, mealSourceModule, mealUseCaseModule))
         }
     }
 }

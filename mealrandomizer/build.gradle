@@ -43,6 +43,7 @@ dependencies {
     implementation libs.koinViewModel
     implementation libs.room
     implementation libs.roomKtx
+    implementation libs.okhttp
     kapt libs.roomKapt
 
     testImplementation libs.junit

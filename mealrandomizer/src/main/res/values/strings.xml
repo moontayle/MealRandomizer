@@ -2,4 +2,7 @@
 <resources>
     <string name="button_randomize">Randomize</string>
     <string name="button_add_item">Add Item</string>
+    <string name="button_show">Show</string>
+    <string name="et_meal_hint">Meal</string>
+    <string name="tv_total_meals">Total Meals Saved: %1$d</string>
 </resources>
