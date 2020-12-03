@@ -16,4 +16,10 @@ class MealsRepositoryImpl(private val mealSource: MealSource) : MealsRepository 
     override suspend fun insertMeals(meals: List<Meal>) {
         mealSource.insertMeals(meals)
     }
+
+    override suspend fun updateMeals(meals: List<Meal>) {
+        meals.forEach {
+            mealSource.updateMeal(it)
+        }
+    }
 }

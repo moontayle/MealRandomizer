@@ -5,4 +5,5 @@
     <string name="button_show">Show</string>
     <string name="et_meal_hint">Meal</string>
     <string name="tv_total_meals">Total Meals Saved: %1$d</string>
+    <string name="btn_save_list">Save List</string>
 </resources>

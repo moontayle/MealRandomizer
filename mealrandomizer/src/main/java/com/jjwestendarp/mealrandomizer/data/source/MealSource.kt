@@ -5,15 +5,19 @@ import com.jjwestendarp.mealrandomizer.domain.Meal
 
 class MealSource(private val mealsDao: MealsDao) {
 
-    suspend fun getMeals(): List<Meal> {
+    fun getMeals(): List<Meal> {
         return mealsDao.getAll()
     }
 
-    suspend fun insertMeal(meal: Meal) {
+    fun insertMeal(meal: Meal) {
         mealsDao.insertMeal(meal)
     }
 
-    suspend fun insertMeals(meals: List<Meal>) {
+    fun insertMeals(meals: List<Meal>) {
         mealsDao.insertMeals(*meals.toTypedArray())
+    }
+
+    fun updateMeal(meal: Meal) {
+        mealsDao.update(meal)
     }
 }

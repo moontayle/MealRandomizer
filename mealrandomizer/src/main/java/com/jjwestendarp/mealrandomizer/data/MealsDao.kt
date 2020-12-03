@@ -3,6 +3,7 @@ package com.jjwestendarp.mealrandomizer.data
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
+import androidx.room.Update
 import com.jjwestendarp.mealrandomizer.domain.Meal
 
 @Dao
@@ -15,4 +16,7 @@ interface MealsDao {
 
     @Insert
     fun insertMeals(vararg meals: Meal)
+
+    @Update(entity = Meal::class)
+    fun update(meal: Meal)
 }
